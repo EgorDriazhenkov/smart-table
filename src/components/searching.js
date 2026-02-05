@@ -8,7 +8,7 @@ const compare = createComparison(rules.skipEmptyTargetValues(), rules.searchMult
     return (data, state, action) => {
 
         // @todo: #5.2 — применить компаратор 
-       
-        return data;
+        
+        return data.filter(row => compare(row, state))
     }
 }
